@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kamila Mascena | Solicitar Orçamento</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#e1398d", // Magenta
+                        secondary: "#814896", // Purple
+                        accent: "#9e1768",
+                        "background-light": "#fdf8ff",
+                        "background-dark": "#0f0514",
+                    },
+                    fontFamily: {
+                        display: ["Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif"],
+                        sans: ["Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-display bg-[var(--bg-gradient)];
+            }
+        }
+        :root {
+            --bg-gradient: linear-gradient(135deg, #fdf8ff 0%, #f5eefc 100%);
+        }
+        .dark {
+            --bg-gradient: linear-gradient(135deg, #0f0514 0%, #1a0b25 100%);
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .dark .glass {
+            background: rgba(15, 5, 20, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #e1398d, #814896);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .brand-gradient-bg {
+            background: linear-gradient(135deg, #814896 0%, #e1398d 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-background-dark/70 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-800/50">
+<div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<img alt="Kamila Mascena Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARlVHomM-cbqtYQkXg_sZOOShSgmFKt8wOBCK70VO9xhpAywF7d--98xGgdzVENk2kZpEYvGYkFt7wLaw4vuSiFjtJ2hjSzVzwK8wv_1E_2CS8iK7prqU4Z_GEjMpj7BbDkCpi-D7q-rmHElzLpIerWLsJ65QuP4hdSp1bkJUqE52W5-48SirrMBGCQLZ7bMRDkYyzapKuMrgzQL3X_xFMHJhhYtUp0YIKdiWjqIDN6JuRHQPnodQO3xb8PhXNdLU-XQp4LVsjfqg"/>
+</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Sobre</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Serviços</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Portfólio</a>
+<a class="px-7 py-2.5 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-bold text-sm hover:shadow-lg hover:shadow-primary/30 transition-all active:scale-95" href="#">Solicitar Orçamento</a>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined text-xl">dark_mode</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-40 pb-32 px-6">
+<div class="max-w-5xl mx-auto bg-white dark:bg-slate-900 rounded-[3rem] shadow-[0_32px_64px_-16px_rgba(129,72,150,0.15)] overflow-hidden flex flex-col lg:flex-row">
+<div class="lg:w-[40%] brand-gradient-bg p-12 lg:p-16 text-white flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 space-y-10">
+<div class="space-y-4">
+<h1 class="text-4xl font-black leading-tight">Vamos tirar sua ideia do papel?</h1>
+<p class="text-white/80 font-medium">Estou pronta para transformar seu projeto em algo extraordinário. Preencha o formulário e vamos conversar.</p>
+</div>
+<div class="space-y-8">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-[10px] font-black uppercase tracking-widest text-white/60">E-mail</p>
+<p class="font-bold">contato@kamilamascena.com</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-[10px] font-black uppercase tracking-widest text-white/60">Localização</p>
+<p class="font-bold">São Paulo, Brasil</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative z-10 pt-12">
+<p class="text-[10px] font-black uppercase tracking-widest text-white/60 mb-4">Siga-me</p>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center font-black hover:bg-white hover:text-secondary transition-all" href="#">IG</a>
+<a class="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center font-black hover:bg-white hover:text-secondary transition-all" href="#">BE</a>
+<a class="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center font-black hover:bg-white hover:text-secondary transition-all" href="#">LI</a>
+</div>
+</div>
+</div>
+<div class="lg:w-[60%] p-12 lg:p-16 dark:bg-slate-900/40">
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="text-xs font-black uppercase tracking-widest text-slate-400">Nome Completo</label>
+<input class="w-full px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-2 border-slate-100 dark:border-slate-800 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none font-medium transition-all" placeholder="Como podemos te chamar?" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-black uppercase tracking-widest text-slate-400">E-mail</label>
+<input class="w-full px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-2 border-slate-100 dark:border-slate-800 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none font-medium transition-all" placeholder="seu@email.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-black uppercase tracking-widest text-slate-400">WhatsApp</label>
+<input class="w-full px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-2 border-slate-100 dark:border-slate-800 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none font-medium transition-all" placeholder="(00) 00000-0000" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-black uppercase tracking-widest text-slate-400">Qual serviço você procura?</label>
+<select class="w-full px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-2 border-slate-100 dark:border-slate-800 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none font-medium transition-all appearance-none cursor-pointer">
+<option>Selecione uma opção</option>
+<option>Fotografia &amp; Vídeo</option>
+<option>Identidade Visual</option>
+<option>Drone &amp; Cinematografia</option>
+<option>Pacote Completo</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-black uppercase tracking-widest text-slate-400">Mensagem</label>
+<textarea class="w-full px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-2 border-slate-100 dark:border-slate-800 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none font-medium transition-all" placeholder="Conte-nos um pouco sobre seu projeto..." rows="4"></textarea>
+</div>
+<button class="w-full py-5 bg-secondary text-white font-black rounded-2xl hover:bg-primary transition-all shadow-lg shadow-secondary/20 active:scale-[0.98] text-lg" type="submit">
+                        Enviar Solicitação
+                    </button>
+</form>
+</div>
+</div>
+</main>
+<footer class="py-24 px-6 bg-slate-50 dark:bg-slate-900/80 border-t border-slate-200 dark:border-slate-800 relative overflow-hidden">
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none select-none flex flex-wrap gap-20 items-center justify-center overflow-hidden">
+<span class="text-[12rem] font-black tracking-tighter transform rotate-12">KM</span>
+<span class="text-[15rem] font-black tracking-tighter transform -rotate-12">KAMILA</span>
+<span class="text-[12rem] font-black tracking-tighter transform rotate-45">MASCENA</span>
+</div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-12 pb-16 border-b border-slate-200 dark:border-slate-800">
+<div class="flex flex-col items-center md:items-start gap-4">
+<img alt="Kamila Mascena Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9nLPwTc-pVNoSX-eVfEbUBckeHAwYXP31Tqrxk-tMNAnCauLk8WVTrXBCwqhkUYizTEfM8Cwjgjn-N_rFhPmSKkN7GrZpXux0qoNi9JnAQpo21a0ri0NFXgAmnIUsT2z2wA2GztdtaxLNo6ajpDKRbwh82kIYaychnTaPiWYsG97Jix4nR1wqSMiO6fCi8gGxWuuc-MRjZeGq0j9e2aMwHrQwXQ0u9LoNPH3utKZqzKEgPxv6DNjrAX3rJBCP9shil33M8-6Qrcg"/>
+<p class="text-slate-500 text-sm font-bold max-w-xs text-center md:text-left">Transformando visão artística em resultados estratégicos para marcas memoráveis.</p>
+</div>
+<div class="flex gap-16">
+<div class="space-y-4">
+<p class="font-black text-xs uppercase tracking-widest text-slate-400">Navegação</p>
+<ul class="space-y-2 font-bold text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Sobre</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Serviços</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Portfólio</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<p class="font-black text-xs uppercase tracking-widest text-slate-400">Suporte</p>
+<ul class="space-y-2 font-bold text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Contato</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-500 text-xs font-bold">© 2024 Kamila Mascena. Design &amp; Branding por Kamila Mascena.</p>
+<div class="flex gap-6">
+<span class="text-xs font-black uppercase tracking-widest text-primary">Fotografia • Identidade Visual • Drone</span>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

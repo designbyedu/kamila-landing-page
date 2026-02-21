@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kamila Mascena | Meus Serviços</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#e1398d", // Magenta
+                        secondary: "#814896", // Purple
+                        accent: "#9e1768",
+                        "background-light": "#fdf8ff",
+                        "background-dark": "#0f0514",
+                    },
+                    fontFamily: {
+                        display: ["Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif"],
+                        sans: ["Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-display bg-[var(--bg-gradient)];
+            }
+        }
+        :root {
+            --bg-gradient: linear-gradient(135deg, #fdf8ff 0%, #f5eefc 100%);
+        }
+        .dark {
+            --bg-gradient: linear-gradient(135deg, #0f0514 0%, #1a0b25 100%);
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .dark .glass {
+            background: rgba(15, 5, 20, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #e1398d, #814896);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .brand-gradient-bg {
+            background: linear-gradient(135deg, #814896 0%, #e1398d 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .service-card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(129, 72, 150, 0.25);
+        }
+    </style>
+</head>
+<body class="text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-background-dark/70 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-800/50">
+<div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<img alt="Kamila Mascena Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARlVHomM-cbqtYQkXg_sZOOShSgmFKt8wOBCK70VO9xhpAywF7d--98xGgdzVENk2kZpEYvGYkFt7wLaw4vuSiFjtJ2hjSzVzwK8wv_1E_2CS8iK7prqU4Z_GEjMpj7BbDkCpi-D7q-rmHElzLpIerWLsJ65QuP4hdSp1bkJUqE52W5-48SirrMBGCQLZ7bMRDkYyzapKuMrgzQL3X_xFMHJhhYtUp0YIKdiWjqIDN6JuRHQPnodQO3xb8PhXNdLU-XQp4LVsjfqg"/>
+</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#sobre">Sobre</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#servicos">Serviços</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#portfolio">Portfólio</a>
+<a class="px-7 py-2.5 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-bold text-sm hover:shadow-lg hover:shadow-primary/30 transition-all active:scale-95" href="#contato">Solicitar Orçamento</a>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined text-xl">dark_mode</span>
+</button>
+</div>
+</div>
+</nav>
+<header class="pt-48 pb-24 px-6 relative overflow-hidden text-center">
+<div class="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[150px] -z-10 translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] -z-10 -translate-x-1/2 translate-y-1/2"></div>
+<div class="max-w-4xl mx-auto space-y-6">
+<h2 class="text-primary font-black tracking-[0.3em] uppercase text-sm">Elevando sua marca</h2>
+<h1 class="text-6xl lg:text-7xl font-black leading-tight tracking-tight">Meus <span class="gradient-text">Serviços</span></h1>
+<p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed font-medium">
+            Soluções completas em fotografia, vídeo e branding estratégico para destacar seu negócio em um mercado competitivo.
+        </p>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 pb-32 space-y-32">
+<section class="scroll-mt-24" id="servicos">
+<div class="flex items-center gap-6 mb-12">
+<div class="w-16 h-16 brand-gradient-bg rounded-2xl flex items-center justify-center text-white shadow-lg">
+<span class="material-symbols-outlined text-3xl">photo_camera</span>
+</div>
+<div>
+<h2 class="text-3xl font-black">Fotografia &amp; Vídeo</h2>
+<p class="text-slate-500 font-bold uppercase tracking-widest text-xs">Captura Visual Profissional</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 glass rounded-[2.5rem] flex flex-col h-full service-card-hover transition-all duration-300">
+<h3 class="text-xl font-black mb-2">Professional</h3>
+<p class="text-slate-500 text-sm font-bold mb-6 italic">Ideal para freelancers e iniciantes</p>
+<div class="text-4xl font-black mb-8">R$ 1.200<span class="text-sm font-medium text-slate-400">/sessão</span></div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-sm font-bold"><span class="material-symbols-outlined text-primary text-xl">check_circle</span> 2 horas de ensaio</li>
+<li class="flex items-center gap-3 text-sm font-bold"><span class="material-symbols-outlined text-primary text-xl">check_circle</span> 20 fotos editadas</li>
+<li class="flex items-center gap-3 text-sm font-bold"><span class="material-symbols-outlined text-primary text-xl">check_circle</span> 1 locação externa</li>
+<li class="flex items-center gap-3 text-sm font-bold"><span class="material-symbols-outlined text-primary text-xl">check_circle</span> Entrega em 7 dias úteis</li>
+</ul>
+<a class="w-full py-4 text-center border-2 border-primary text-primary font-black rounded-2xl hover:bg-primary hover:text-white transition-all" href="#contato">Solicitar Orçamento</a>
+</div>
+<div class="p-8 brand-gradient-bg rounded-[2.5rem] flex flex-col h-full shadow-2xl shadow-primary/30 transform lg:scale-105 relative">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-white text-primary text-[10px] font-black uppercase tracking-widest rounded-full shadow-md">Mais Popular</div>
+<h3 class="text-xl font-black mb-2 text-white">Premium</h3>
+<p class="text-white/70 text-sm font-bold mb-6 italic">Para marcas em expansão</p>
+<div class="text-4xl font-black mb-8 text-white">R$ 2.500<span class="text-sm font-medium text-white/60">/sessão</span></div>
+<ul class="space-y-4 mb-10 flex-grow text-white">
+<li class="flex items-center gap-3 text-sm font-bold"><span class="material-symbols-outlined text-white/50 text-xl">check_circle</span> 4 horas de ensaio</li>
+<li class="flex items-center gap-3 text-sm font-bold"><span class="material-symbols-outlined text-white/50 text-xl">check_circle</span> 50 fotos editadas</li>
+<li class="flex items-center gap-3 text-sm font-bold"><span class="material-symbols-outlined text-white/50 text-xl">check_circle</span> Estúdio + Externa</li>
+<li class="flex items-center gap-3 text-sm font-bold"><span class="material-symbols-outlined text-white/50 text-xl">check_circle</span> 3 Reels editados</li>
+<li class="flex items-center gap-3 text-sm font-bold"><span class="material-symbols-outlined text-white/50 text-xl">check_circle</span> Entrega em 5 dias úteis</li>
+</ul>
+<a class="w-full py-4 text-center bg-white text-secondary font-black rounded-2xl hover:shadow-xl transition-all" href="#contato">Solicitar Orçamento</a>
+</div>
+<div class="p-8 glass rounded-[2.5rem] flex flex-col h-full service-card-hover transition-all duration-300">
+<h3 class="text-xl font-black mb-2">Custom</h3>
+<p class="text-slate-500 text-sm font-bold mb-6 italic">Sob medida para grandes empresas</p>
+<div class="text-4xl font-black mb-8">Sob consulta</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-sm font-bold"><span class="material-symbols-outlined text-secondary text-xl">check_circle</span> Diária completa</li>
+<li class="flex items-center gap-3 text-sm font-bold"><span class="material-symbols-outlined text-secondary text-xl">check_circle</span> Fotos ilimitadas editadas</li>
+<li class="flex items-center gap-3 text-sm font-bold"><span class="material-symbols-outlined text-secondary text-xl">check_circle</span> Equipe de apoio</li>
+<li class="flex items-center gap-3 text-sm font-bold"><span class="material-symbols-outlined text-secondary text-xl">check_circle</span> Produção executiva</li>
+</ul>
+<a class="w-full py-4 text-center border-2 border-secondary text-secondary font-black rounded-2xl hover:bg-secondary hover:text-white transition-all" href="#contato">Falar Conosco</a>
+</div>
+</div>
+</section>
+<section class="scroll-mt-24" id="identidade">
+<div class="flex items-center gap-6 mb-12 flex-row-reverse md:flex-row">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary shadow-lg">
+<span class="material-symbols-outlined text-3xl">palette</span>
+</div>
+<div>
+<h2 class="text-3xl font-black">Identidade Visual</h2>
+<p class="text-slate-500 font-bold uppercase tracking-widest text-xs">Branding &amp; Design Estratégico</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="p-10 glass rounded-[3rem] border-primary/10 hover:border-primary/40 transition-colors">
+<h3 class="text-2xl font-black mb-6">Branding Express</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-8 font-medium">Ideal para quem precisa de um posicionamento rápido e profissional.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+<div class="flex items-center gap-2 font-bold text-sm"><span class="material-symbols-outlined text-primary">done</span> Logo Principal</div>
+<div class="flex items-center gap-2 font-bold text-sm"><span class="material-symbols-outlined text-primary">done</span> Paleta de Cores</div>
+<div class="flex items-center gap-2 font-bold text-sm"><span class="material-symbols-outlined text-primary">done</span> Tipografia</div>
+<div class="flex items-center gap-2 font-bold text-sm"><span class="material-symbols-outlined text-primary">done</span> Manual Básico</div>
+</div>
+<div class="flex items-center justify-between pt-6 border-t border-slate-200 dark:border-slate-800">
+<span class="text-2xl font-black">A partir de R$ 1.800</span>
+<a class="px-6 py-3 brand-gradient-bg text-white font-bold rounded-xl text-sm" href="#contato">Contratar</a>
+</div>
+</div>
+<div class="p-10 glass rounded-[3rem] border-secondary/10 hover:border-secondary/40 transition-colors">
+<h3 class="text-2xl font-black mb-6">Identidade Premium</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-8 font-medium">Desenvolvimento completo e estratégico da marca do zero ao lançamento.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+<div class="flex items-center gap-2 font-bold text-sm"><span class="material-symbols-outlined text-secondary">done</span> Branding Completo</div>
+<div class="flex items-center gap-2 font-bold text-sm"><span class="material-symbols-outlined text-secondary">done</span> Brandbook Detalhado</div>
+<div class="flex items-center gap-2 font-bold text-sm"><span class="material-symbols-outlined text-secondary">done</span> Social Media Kit</div>
+<div class="flex items-center gap-2 font-bold text-sm"><span class="material-symbols-outlined text-secondary">done</span> Papelaria</div>
+</div>
+<div class="flex items-center justify-between pt-6 border-t border-slate-200 dark:border-slate-800">
+<span class="text-2xl font-black">Sob Orçamento</span>
+<a class="px-6 py-3 bg-secondary text-white font-bold rounded-xl text-sm" href="#contato">Contratar</a>
+</div>
+</div>
+</div>
+</section>
+<section class="scroll-mt-24" id="drone">
+<div class="flex items-center gap-6 mb-12">
+<div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary shadow-lg">
+<span class="material-symbols-outlined text-3xl">flightsmode</span>
+</div>
+<div>
+<h2 class="text-3xl font-black">Drone &amp; Cinematografia</h2>
+<p class="text-slate-500 font-bold uppercase tracking-widest text-xs">Perspectivas Aéreas Únicas</p>
+</div>
+</div>
+<div class="bg-gradient-to-br from-secondary to-primary p-12 rounded-[3.5rem] text-white overflow-hidden relative">
+<div class="absolute top-0 right-0 p-20 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[15rem]">videocam</span>
+</div>
+<div class="max-w-2xl relative z-10 space-y-8">
+<h3 class="text-4xl font-black italic">Dê um novo ângulo ao seu projeto.</h3>
+<p class="text-lg text-white/80 font-medium">Imagens em 4K HDR com drones de última geração para imobiliárias, eventos corporativos e produções cinematográficas.</p>
+<div class="grid grid-cols-2 gap-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-white/50">4k</span>
+<div>
+<p class="font-black">Resolução 4K</p>
+<p class="text-xs text-white/60">Imagens ultra nítidas</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-white/50">speed</span>
+<div>
+<p class="font-black">FPV Racing</p>
+<p class="text-xs text-white/60">Vídeos dinâmicos e imersivos</p>
+</div>
+</div>
+</div>
+<button class="px-10 py-5 bg-white text-secondary font-black rounded-2xl shadow-xl hover:scale-105 transition-transform">Solicitar Orçamento de Drone</button>
+</div>
+</div>
+</section>
+<section class="py-20 relative" id="feedback">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-primary font-black tracking-[0.2em] uppercase text-xs">Feedback</h2>
+<h3 class="text-5xl font-black">Vozes de Quem Confia</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="p-10 glass rounded-[2.5rem] shadow-xl border border-white/20 relative group hover:-translate-y-2 transition-all">
+<div class="flex gap-1 text-primary mb-6">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-lg font-medium italic mb-8 leading-relaxed">"A Kamila não apenas tira fotos, ela entende a narrativa que queremos passar. O trabalho de Identidade Visual superou o que imaginamos."</p>
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="Cliente" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtUQKGy2PMdIKN170BNmEAdx88NJTaxt1kMk71DUyMc6oucvHpMkygFx8q91U1kAlypVIIQVBM3Gdg5zAR7mdX29ASophl0WqxOFdIvbysOPP3Oy9XjmW1GU_kWMh12yy9Oz-PbGYWq9nkEJVItNtLwWxTK-dTNDxY-B2VwfBK2bxiWnFEy457z_dYylev3DUQGF4wbbrUPvHrQhorNwUWw-HJMrWzHk0PnLzfu2l6MhjsAQX-DQ0Iw5Z0v2hOQPSavmNezRfAj9c"/>
+</div>
+<div>
+<p class="font-black text-slate-900 dark:text-white">Ricardo Mendes</p>
+<p class="text-xs font-bold text-primary uppercase tracking-wider">Diretor Criativo</p>
+</div>
+</div>
+</div>
+<div class="p-10 brand-gradient-bg rounded-[2.5rem] shadow-2xl shadow-primary/30 text-white relative group hover:-translate-y-2 transition-all">
+<div class="flex gap-1 text-white/80 mb-6">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-lg font-medium italic mb-8 leading-relaxed">"Contratamos o pacote de Drone e as imagens transformaram nosso material promocional. Qualidade de cinema em cada frame."</p>
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center font-black text-xl">AM</div>
+<div>
+<p class="font-black">Ana Martins</p>
+<p class="text-xs font-bold text-white/70 uppercase tracking-wider">Marketing imobiliário</p>
+</div>
+</div>
+</div>
+<div class="p-10 glass rounded-[2.5rem] shadow-xl border border-white/20 relative group hover:-translate-y-2 transition-all">
+<div class="flex gap-1 text-secondary mb-6">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-lg font-medium italic mb-8 leading-relaxed">"Pontualidade e um olhar artístico raro de encontrar. Indico a Kamila para qualquer empresa que queira ser levada a sério."</p>
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-secondary/20 flex items-center justify-center font-black text-xl">JP</div>
+<div>
+<p class="font-black text-slate-900 dark:text-white">João Paulo</p>
+<p class="text-xs font-bold text-secondary uppercase tracking-wider">CEO, Future Lab</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<section class="py-32 px-6" id="contato">
+<div class="max-w-6xl mx-auto glass rounded-[4rem] p-10 md:p-20 shadow-[0_32px_64px_-16px_rgba(129,72,150,0.2)] relative overflow-hidden border-white/40">
+<div class="absolute -top-20 -right-20 w-80 h-80 brand-gradient-bg opacity-10 rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-20 -left-20 w-80 h-80 bg-secondary opacity-10 rounded-full blur-[100px]"></div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 relative z-10">
+<div class="space-y-10">
+<div class="space-y-4">
+<h2 class="text-5xl font-black leading-tight">Pronto para o seu <span class="gradient-text">próximo nível?</span></h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Preencha o formulário e entrarei em contato em até 24 horas para conversarmos sobre seu projeto.</p>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-5 group">
+<div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:brand-gradient-bg group-hover:text-white transition-all shadow-sm">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<span class="font-bold text-slate-700 dark:text-slate-300">contato@kamilamascena.com</span>
+</div>
+<div class="flex items-center gap-5 group">
+<div class="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary group-hover:brand-gradient-bg group-hover:text-white transition-all shadow-sm">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<span class="font-bold text-slate-700 dark:text-slate-300">São Paulo, Brasil</span>
+</div>
+</div>
+<div class="flex gap-4 pt-6">
+<a class="w-14 h-14 rounded-2xl border-2 border-slate-100 dark:border-slate-700 flex items-center justify-center font-black hover:brand-gradient-bg hover:text-white hover:border-transparent transition-all shadow-sm" href="#">IG</a>
+<a class="w-14 h-14 rounded-2xl border-2 border-slate-100 dark:border-slate-700 flex items-center justify-center font-black hover:brand-gradient-bg hover:text-white hover:border-transparent transition-all shadow-sm" href="#">BE</a>
+<a class="w-14 h-14 rounded-2xl border-2 border-slate-100 dark:border-slate-700 flex items-center justify-center font-black hover:brand-gradient-bg hover:text-white hover:border-transparent transition-all shadow-sm" href="#">LI</a>
+</div>
+</div>
+<form class="space-y-5">
+<input class="w-full px-8 py-5 bg-white dark:bg-slate-900/50 border-2 border-slate-100 dark:border-slate-700 rounded-[1.5rem] focus:ring-2 focus:ring-primary focus:border-transparent shadow-sm font-bold text-sm" placeholder="Seu Nome" type="text"/>
+<input class="w-full px-8 py-5 bg-white dark:bg-slate-900/50 border-2 border-slate-100 dark:border-slate-700 rounded-[1.5rem] focus:ring-2 focus:ring-primary focus:border-transparent shadow-sm font-bold text-sm" placeholder="Seu E-mail" type="email"/>
+<select class="w-full px-8 py-5 bg-white dark:bg-slate-900/50 border-2 border-slate-100 dark:border-slate-700 rounded-[1.5rem] focus:ring-2 focus:ring-primary focus:border-transparent shadow-sm font-bold text-sm text-slate-500">
+<option>Qual serviço você procura?</option>
+<option>Fotografia &amp; Vídeo Profissional</option>
+<option>Identidade Visual &amp; Branding</option>
+<option>Drone &amp; Cinematografia</option>
+<option>Pacote Completo</option>
+</select>
+<textarea class="w-full px-8 py-5 bg-white dark:bg-slate-900/50 border-2 border-slate-100 dark:border-slate-700 rounded-[1.5rem] focus:ring-2 focus:ring-primary focus:border-transparent shadow-sm font-bold text-sm" placeholder="Conte-me um pouco sobre sua marca..." rows="4"></textarea>
+<button class="w-full py-5 bg-gradient-to-r from-primary to-secondary text-white font-black rounded-[1.5rem] hover:shadow-2xl hover:shadow-primary/30 transition-all shadow-lg active:scale-[0.98]" type="submit">Solicitar Orçamento</button>
+</form>
+</div>
+</div>
+</section>
+<footer class="py-24 px-6 bg-slate-50 dark:bg-slate-900/80 border-t border-slate-200 dark:border-slate-800 relative overflow-hidden">
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none select-none flex flex-wrap gap-20 items-center justify-center overflow-hidden">
+<span class="text-[12rem] font-black tracking-tighter transform rotate-12">KM</span>
+<span class="text-[15rem] font-black tracking-tighter transform -rotate-12">KAMILA</span>
+<span class="text-[12rem] font-black tracking-tighter transform rotate-45">MASCENA</span>
+</div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-12 pb-16 border-b border-slate-200 dark:border-slate-800">
+<div class="flex flex-col items-center md:items-start gap-4">
+<img alt="Kamila Mascena Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9nLPwTc-pVNoSX-eVfEbUBckeHAwYXP31Tqrxk-tMNAnCauLk8WVTrXBCwqhkUYizTEfM8Cwjgjn-N_rFhPmSKkN7GrZpXux0qoNi9JnAQpo21a0ri0NFXgAmnIUsT2z2wA2GztdtaxLNo6ajpDKRbwh82kIYaychnTaPiWYsG97Jix4nR1wqSMiO6fCi8gGxWuuc-MRjZeGq0j9e2aMwHrQwXQ0u9LoNPH3utKZqzKEgPxv6DNjrAX3rJBCP9shil33M8-6Qrcg"/>
+<p class="text-slate-500 text-sm font-bold max-w-xs text-center md:text-left">Transformando visão artística em resultados estratégicos para marcas memoráveis.</p>
+</div>
+<div class="flex gap-16">
+<div class="space-y-4">
+<p class="font-black text-xs uppercase tracking-widest text-slate-400">Navegação</p>
+<ul class="space-y-2 font-bold text-sm">
+<li><a class="hover:text-primary transition-colors" href="#sobre">Sobre</a></li>
+<li><a class="hover:text-primary transition-colors" href="#servicos">Serviços</a></li>
+<li><a class="hover:text-primary transition-colors" href="#portfolio">Portfólio</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<p class="font-black text-xs uppercase tracking-widest text-slate-400">Suporte</p>
+<ul class="space-y-2 font-bold text-sm">
+<li><a class="hover:text-primary transition-colors" href="#contato">Contato</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-500 text-xs font-bold">© 2024 Kamila Mascena. Design &amp; Branding por Kamila Mascena.</p>
+<div class="flex gap-6">
+<span class="text-xs font-black uppercase tracking-widest text-primary">Fotografia • Identidade Visual • Drone</span>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

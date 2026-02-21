@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Kamila Mascena | Portfólio &amp; Identidade Visual</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#e1398d", // Magenta
+                        secondary: "#814896", // Purple
+                        accent: "#9e1768",
+                        "background-light": "#fdf8ff",
+                        "background-dark": "#0f0514",
+                    },
+                    fontFamily: {
+                        display: ["Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif"],
+                        sans: ["Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-display bg-slate-50 dark:bg-background-dark text-slate-900 dark:text-slate-100;
+            }
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .dark .glass {
+            background: rgba(15, 5, 20, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #e1398d, #814896);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .brand-gradient-bg {
+            background: linear-gradient(135deg, #814896 0%, #e1398d 100%);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(129, 72, 150, 0.05) 0%, rgba(225, 57, 141, 0.05) 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 1.5rem;
+        }
+        .masonry-item-tall { grid-row: span 2; }
+        .masonry-item-wide { grid-column: span 2; }
+        
+        /* Adicionando máscara com gradiente para fazer a roupa sumir de forma suave/esfumaçada pra baixo no avatar */
+        .avatar-mask {
+            -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        }
+    </style>
+</head>
+
+<body class="transition-colors duration-300">
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/20 dark:border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <a href="index.html">
+                    <img alt="Kamila Mascena Logo" class="h-10 w-auto" src="assets/LOGO_PADRAO.png" />
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-10">
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="index.html#sobre">Sobre</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="servicos.html">Serviços</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors"
+                    href="index.html#portfolio">Portfólio</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors"
+                    href="index.html#contato">Contato</a>
+                <a class="px-7 py-2.5 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-bold text-sm hover:shadow-lg hover:shadow-primary/30 transition-all active:scale-95"
+                    href="index.html#contato">Vamos Conversar</a>
+                <button
+                    class="p-2 rounded-full hover:bg-white/20 dark:hover:bg-slate-800 transition-colors flex items-center"
+                    onclick="document.documentElement.classList.toggle('dark')">
+                    <span class="material-symbols-outlined text-xl">dark_mode</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <header class="pt-48 pb-32 px-6 relative overflow-hidden hero-gradient">
+        <div
+            class="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary/10 rounded-full blur-[150px] -z-10 translate-x-1/2 -translate-y-1/2">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] -z-10 -translate-x-1/2 translate-y-1/2">
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-10">
+                <div
+                    class="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-wider uppercase">
+                    <span class="relative flex h-2 w-2 mr-3">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                    </span>
+                    Disponível para novos projetos
+                </div>
+                <h1 class="text-6xl lg:text-8xl font-black leading-[1.05] tracking-tight">
+                    Design que <span class="gradient-text">Conecta</span>, Arte que Fica.
+                </h1>
+                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed font-medium">
+                    Especialista em Identidade Visual e Fotografia dedicada a elevar sua marca através de narrativas
+                    visuais potentes e design estratégico.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-5 pt-4">
+                    <a class="px-10 py-5 bg-gradient-to-r from-primary to-secondary text-white rounded-2xl font-bold flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-95 transition-all shadow-2xl shadow-primary/40"
+                        href="#portfolio">
+                        Explorar Portfólio <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                    <a class="px-10 py-5 bg-white/50 dark:bg-slate-800 border-2 border-white/50 dark:border-slate-700 rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-white dark:hover:bg-slate-700 transition-all"
+                        href="servicos.html">
+                        Meus Serviços
+                    </a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 blur-[100px] rounded-full -z-10">
+                </div>
+                <div class="relative w-full max-w-lg group">
+                    <img alt="Kamila Mascena Avatar"
+                        class="w-full drop-shadow-2xl transition-transform duration-700 group-hover:scale-[1.02] avatar-mask"
+                        src="assets/avatar.png" />
+                    <div class="absolute bottom-10 -left-6 glass p-6 rounded-3xl flex items-center gap-5 shadow-2xl">
+                        <div class="brand-gradient-bg p-3.5 rounded-2xl text-white shadow-lg">
+                            <span class="material-symbols-outlined text-2xl">workspace_premium</span>
+                        </div>
+                        <div>
+                            <p class="text-xl font-black leading-none">10+ Anos</p>
+                            <p class="text-[10px] font-bold opacity-70 uppercase tracking-widest mt-1">De Expertise</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section
+        class="py-16 border-y border-slate-200/50 dark:border-slate-800/50 bg-white/50 dark:bg-black/20 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-center text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 mb-10">Parceiros
+                &amp; Colaboradores</p>
+            <div
+                class="flex flex-wrap justify-center items-center gap-16 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
+                <span class="text-3xl font-black italic tracking-tighter">ADOBE</span>
+                <span class="text-3xl font-black italic tracking-tighter">CANON</span>
+                <span class="text-3xl font-black italic tracking-tighter">FIGMA</span>
+                <span class="text-3xl font-black italic tracking-tighter">DJI</span>
+            </div>
+        </div>
+    </section>
+    <section class="py-32 px-6 relative" id="sobre">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            <div class="relative">
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="space-y-6">
+                        <img alt="Studio Work"
+                            class="rounded-[3rem] shadow-2xl h-80 w-full object-cover border-4 border-white dark:border-slate-800"
+                            src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=800&auto=format&fit=crop" />
+                        <div class="brand-gradient-bg h-40 rounded-[2.5rem] w-full opacity-10"></div>
+                    </div>
+                    <div class="pt-16 space-y-6">
+                        <div class="brand-gradient-bg h-40 rounded-[2.5rem] w-full opacity-10"></div>
+                        <img alt="Professional Gear"
+                            class="rounded-[3rem] shadow-2xl h-80 w-full object-cover border-4 border-white dark:border-slate-800"
+                            src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=800&auto=format&fit=crop" />
+                    </div>
+                </div>
+                <div class="absolute -z-10 inset-0 bg-primary/5 blur-3xl rounded-full"></div>
+            </div>
+            <div class="space-y-10">
+                <div class="inline-block">
+                    <h2 class="text-primary font-black tracking-[0.3em] uppercase text-xs mb-3">Minha Jornada</h2>
+                    <div class="h-1.5 w-16 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+                </div>
+                <h3 class="text-5xl font-black leading-tight">Transformando Visão em <span
+                        class="gradient-text">Realidade Visual</span></h3>
+                <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed font-medium">
+                    Olá, sou Kamila Mascena. Minha missão é traduzir a essência de marcas e pessoas através de um design
+                    autêntico e fotografia de alto impacto. Com uma abordagem centrada na estratégia, garanto que cada
+                    detalhe visual contribua para o sucesso do seu negócio.
+                </p>
+                <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed font-medium">
+                    Do conceito à execução final, trabalho com precisão para criar identidades que não apenas encantam,
+                    mas que posicionam você como líder no seu mercado.
+                </p>
+                <div class="grid grid-cols-2 gap-12 pt-6">
+                    <div class="group">
+                        <p
+                            class="text-6xl font-black gradient-text mb-1 transition-transform group-hover:scale-105 origin-left inline-block">
+                            500+</p>
+                        <p class="font-bold text-slate-500 uppercase text-[10px] tracking-[0.2em]">Projetos Entregues
+                        </p>
+                    </div>
+                    <div class="group">
+                        <p
+                            class="text-6xl font-black gradient-text mb-1 transition-transform group-hover:scale-105 origin-left inline-block">
+                            150+</p>
+                        <p class="font-bold text-slate-500 uppercase text-[10px] tracking-[0.2em]">Clientes Satisfeitos
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-32 px-6 bg-white dark:bg-slate-900/40 relative overflow-hidden" id="servicos">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center space-y-6 mb-24">
+                <h2 class="text-primary font-black tracking-[0.3em] uppercase text-xs">O que eu faço</h2>
+                <h3 class="text-6xl font-black italic">Serviços Criativos</h3>
+                <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium text-lg">Estratégias visuais
+                    sob medida para as necessidades exclusivas do seu projeto.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div
+                    class="p-12 glass rounded-[3.5rem] hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 group border-transparent hover:border-primary/20">
+                    <div
+                        class="w-20 h-20 bg-primary/10 rounded-[2rem] flex items-center justify-center text-primary mb-10 group-hover:brand-gradient-bg group-hover:text-white transition-all duration-500 shadow-sm">
+                        <span class="material-symbols-outlined text-4xl">photo_camera</span>
+                    </div>
+                    <h4 class="text-2xl font-black mb-6">Fotografia</h4>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-10 font-medium">
+                        Sessões profissionais que capturam a alma dos seus produtos e a autenticidade do seu estilo de
+                        vida.
+                    </p>
+                    <ul class="space-y-4 text-sm font-bold text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-primary text-xl">check_circle</span> Editorial de
+                            Produto</li>
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-primary text-xl">check_circle</span> Retratos
+                            Corporativos</li>
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-primary text-xl">check_circle</span> Lifestyle
+                            Sessions</li>
+                    </ul>
+                </div>
+                <div
+                    class="p-12 brand-gradient-bg rounded-[3.5rem] shadow-2xl shadow-primary/30 transition-all duration-500 transform hover:-translate-y-4 text-white">
+                    <div
+                        class="w-20 h-20 bg-white/20 rounded-[2rem] flex items-center justify-center text-white mb-10 shadow-inner">
+                        <span class="material-symbols-outlined text-4xl">palette</span>
+                    </div>
+                    <h4 class="text-2xl font-black mb-6">Identidade Visual</h4>
+                    <p class="text-white/90 leading-relaxed mb-10 font-medium">
+                        Branding completo: logos, tipografia e diretrizes que tornam sua marca inesquecível e
+                        profissional.
+                    </p>
+                    <ul class="space-y-4 text-sm font-bold">
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-white/50 text-xl">check_circle</span> Design de
+                            Logo Premium</li>
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-white/50 text-xl">check_circle</span> Brand
+                            Strategy</li>
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-white/50 text-xl">check_circle</span> Social Media
+                            Kits</li>
+                    </ul>
+                </div>
+                <div
+                    class="p-12 glass rounded-[3.5rem] hover:shadow-2xl hover:shadow-secondary/10 transition-all duration-500 group border-transparent hover:border-secondary/20">
+                    <div
+                        class="w-20 h-20 bg-secondary/10 rounded-[2rem] flex items-center justify-center text-secondary mb-10 group-hover:brand-gradient-bg group-hover:text-white transition-all duration-500 shadow-sm">
+                        <span class="material-symbols-outlined text-4xl">flightsmode</span>
+                    </div>
+                    <h4 class="text-2xl font-black mb-6">Imagens Aéreas</h4>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-10 font-medium">
+                        Perspectivas únicas com fotografia e videografia aérea 4K para elevar o nível da sua comunicação
+                        visual.
+                    </p>
+                    <ul class="space-y-4 text-sm font-bold text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-secondary text-xl">check_circle</span> Vídeo Aéreo
+                            Cinematic</li>
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-secondary text-xl">check_circle</span> Mapeamento
+                            Criativo</li>
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-secondary text-xl">check_circle</span> Eventos em
+                            Grande Escala</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-32 px-6" id="portfolio">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-12">
+                <div class="space-y-6">
+                    <h2 class="text-primary font-black tracking-[0.3em] uppercase text-xs">Portfólio</h2>
+                    <h3 class="text-6xl font-black">Meu Portfólio</h3>
+                </div>
+                <div
+                    class="flex flex-wrap gap-4 bg-white/50 dark:bg-slate-800/50 p-2 rounded-2xl backdrop-blur-md border border-white/30 dark:border-slate-700/50">
+                    <button data-filter="todos"
+                        class="filter-btn px-8 py-3 rounded-xl bg-gradient-to-r from-primary to-secondary text-white shadow-lg font-bold text-sm transition-all">Todos</button>
+                    <button data-filter="fotografia"
+                        class="filter-btn px-8 py-3 rounded-xl hover:bg-white dark:hover:bg-slate-700 transition-all font-bold text-sm text-slate-500 dark:text-slate-400">Fotografia</button>
+                    <button data-filter="identidade"
+                        class="filter-btn px-8 py-3 rounded-xl hover:bg-white dark:hover:bg-slate-700 transition-all font-bold text-sm text-slate-500 dark:text-slate-400">Identidade
+                        Visual</button>
+                    <button data-filter="drone"
+                        class="filter-btn px-8 py-3 rounded-xl hover:bg-white dark:hover:bg-slate-700 transition-all font-bold text-sm text-slate-500 dark:text-slate-400">Drone</button>
+                </div>
+            </div>
+            <div class="masonry-grid" id="portfolio-grid">
+                <!-- Fotografia 1 (Alta) -->
+                <div class="portfolio-item group relative overflow-hidden rounded-[3rem] masonry-item-tall shadow-xl"
+                    data-category="fotografia">
+                    <img alt="Lifestyle photography"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                        src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=800&auto=format&fit=crop" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-10 text-white translate-y-4 group-hover:translate-y-0">
+                        <p class="text-[10px] font-black uppercase tracking-[0.3em] text-white/80 mb-3">Fotografia</p>
+                        <h5 class="text-3xl font-black">Essência Urbana</h5>
+                        <div class="mt-4 h-1 w-12 bg-white rounded-full"></div>
+                    </div>
+                </div>
+                <!-- Identidade Visual (Média Larga) -->
+                <div class="portfolio-item group relative overflow-hidden rounded-[3rem] masonry-item-wide shadow-xl"
+                    data-category="identidade">
+                    <img alt="Branding case"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                        src="https://images.unsplash.com/photo-1621600411688-4be93cd68504?q=80&w=800&auto=format&fit=crop" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-10 text-white translate-y-4 group-hover:translate-y-0">
+                        <p class="text-[10px] font-black uppercase tracking-[0.3em] text-white/80 mb-3">Identidade
+                            Visual</p>
+                        <h5 class="text-3xl font-black">Tech Modernity Rebrand</h5>
+                        <div class="mt-4 h-1 w-12 bg-white rounded-full"></div>
+                    </div>
+                </div>
+                <!-- Fotografia 2 -->
+                <div class="portfolio-item group relative overflow-hidden rounded-[3rem] shadow-xl"
+                    data-category="fotografia">
+                    <img alt="Creative work"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                        src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=800&auto=format&fit=crop" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8 text-white translate-y-4 group-hover:translate-y-0">
+                        <p class="text-[10px] font-black uppercase tracking-[0.3em] text-white/80 mb-2">Fotografia</p>
+                        <h5 class="text-2xl font-black">Lentes em Criação</h5>
+                    </div>
+                </div>
+                <!-- Drone -->
+                <div class="portfolio-item group relative overflow-hidden rounded-[3rem] shadow-xl masonry-item-wide"
+                    data-category="drone">
+                    <img alt="Drone view"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                        src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=800&auto=format&fit=crop" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8 text-white translate-y-4 group-hover:translate-y-0">
+                        <p class="text-[10px] font-black uppercase tracking-[0.3em] text-white/80 mb-2">Drone</p>
+                        <h5 class="text-2xl font-black">Perspectiva Florestal</h5>
+                    </div>
+                </div>
+                <!-- Identidade Visual 2 -->
+                <div class="portfolio-item group relative overflow-hidden rounded-[3rem] shadow-xl"
+                    data-category="identidade">
+                    <img alt="Design piece"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                        src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=800&auto=format&fit=crop" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8 text-white translate-y-4 group-hover:translate-y-0">
+                        <p class="text-[10px] font-black uppercase tracking-[0.3em] text-white/80 mb-2">Design</p>
+                        <h5 class="text-2xl font-black">Minimal Stationeries</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-20 text-center">
+                <a class="inline-flex items-center gap-4 px-12 py-5 border-2 border-slate-200 dark:border-slate-700 rounded-2xl font-black hover:border-primary hover:text-primary transition-all group"
+                    href="#">
+                    Ver Projetos Completos
+                    <span
+                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="py-32 px-6 bg-gradient-to-b from-transparent via-primary/5 to-transparent">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24 space-y-6">
+                <h2 class="text-primary font-black tracking-[0.3em] uppercase text-xs">Depoimentos</h2>
+                <h3 class="text-6xl font-black">Palavra de quem confia</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div
+                    class="p-12 bg-white dark:bg-slate-800/40 rounded-[3.5rem] shadow-xl border border-white/50 dark:border-slate-700/50 flex flex-col relative transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/30 group cursor-pointer">
+                    <div
+                        class="absolute top-0 right-12 translate-y-[-50%] w-16 h-16 brand-gradient-bg rounded-2xl flex items-center justify-center text-white shadow-lg transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110">
+                        <span class="material-symbols-outlined text-3xl">format_quote</span>
+                    </div>
+                    <p
+                        class="text-xl font-medium italic text-slate-700 dark:text-slate-300 mb-12 flex-grow leading-relaxed transition-colors duration-500 group-hover:text-slate-900 dark:group-hover:text-white">
+                        "O olhar da Kamila é único. Ela conseguiu traduzir os valores da minha empresa em uma identidade
+                        visual que nos trouxe orgulho e novos negócios."</p>
+                    <div class="flex items-center gap-5 pt-8 border-t border-slate-100 dark:border-slate-700">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-slate-200 flex items-center justify-center font-black text-2xl group-hover:brand-gradient-bg group-hover:text-white transition-colors duration-500">
+                            AT</div>
+                        <div>
+                            <p class="font-black text-xl text-slate-900 dark:text-white">Alex Thompson</p>
+                            <p class="text-xs font-bold text-primary uppercase tracking-[0.2em] mt-1">CEO, TechFlow</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="p-12 brand-gradient-bg rounded-[3.5rem] shadow-2xl shadow-primary/30 text-white flex flex-col relative transition-all duration-500 hover:-translate-y-4 hover:shadow-primary/50 group cursor-pointer lg:mt-8">
+                    <div
+                        class="absolute top-0 right-12 translate-y-[-50%] w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-primary shadow-lg transition-transform duration-500 group-hover:-rotate-12 group-hover:scale-110">
+                        <span class="material-symbols-outlined text-3xl">format_quote</span>
+                    </div>
+                    <p class="text-xl font-medium italic mb-12 flex-grow leading-relaxed">"Trabalhar com a Kamila foi um
+                        divisor de águas. A fotografia dela tem uma profundidade que eu nunca tinha visto antes.
+                        Recomendo fortemente!"</p>
+                    <div class="flex items-center gap-5 pt-8 border-t border-white/10">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center font-black text-2xl transition-all duration-500 group-hover:bg-white group-hover:text-primary">
+                            MG</div>
+                        <div>
+                            <p class="font-black text-xl">Maria Gonçalves</p>
+                            <p class="text-xs font-bold text-white/70 uppercase tracking-[0.2em] mt-1">Diretora de
+                                Marketing</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="p-12 bg-white dark:bg-slate-800/40 rounded-[3.5rem] shadow-xl border border-white/50 dark:border-slate-700/50 flex flex-col relative transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:shadow-secondary/10 hover:border-secondary/30 group cursor-pointer">
+                    <div
+                        class="absolute top-0 right-12 translate-y-[-50%] w-16 h-16 brand-gradient-bg rounded-2xl flex items-center justify-center text-white shadow-lg transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110">
+                        <span class="material-symbols-outlined text-3xl">format_quote</span>
+                    </div>
+                    <p
+                        class="text-xl font-medium italic text-slate-700 dark:text-slate-300 mb-12 flex-grow leading-relaxed transition-colors duration-500 group-hover:text-slate-900 dark:group-hover:text-white">
+                        "Extrema atenção aos detalhes e um profissionalismo impecável. Ela superou nossas expectativas
+                        em cada etapa do projeto visual."</p>
+                    <div class="flex items-center gap-5 pt-8 border-t border-slate-100 dark:border-slate-700">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-slate-300 flex items-center justify-center font-black text-2xl group-hover:brand-gradient-bg group-hover:text-white transition-colors duration-500">
+                            SK</div>
+                        <div>
+                            <p class="font-black text-xl text-slate-900 dark:text-white">Sarah Kelly</p>
+                            <p class="text-xs font-bold text-secondary uppercase tracking-[0.2em] mt-1">Founder, Bloom
+                                Studio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-32 px-6" id="contato">
+        <div
+            class="max-w-6xl mx-auto glass rounded-[4.5rem] p-10 md:p-24 shadow-[0_40px_80px_-20px_rgba(129,72,150,0.25)] relative overflow-hidden border-white/50">
+            <div
+                class="absolute top-0 right-0 w-[500px] h-[500px] brand-gradient-bg opacity-5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary opacity-5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2">
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 relative z-10">
+                <div class="space-y-12">
+                    <div class="space-y-6">
+                        <h2 class="text-6xl font-black leading-tight">Vamos criar <span class="gradient-text">algo
+                                novo?</span></h2>
+                        <p class="text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Meu objetivo é
+                            transformar sua ideia em uma marca inesquecível. Entre em contato e vamos conversar sobre
+                            seu próximo passo.</p>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-6 group">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:brand-gradient-bg group-hover:text-white transition-all shadow-sm">
+                                <span class="material-symbols-outlined">mail</span>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-1">E-mail
+                                </p>
+                                <span
+                                    class="text-lg font-bold text-slate-700 dark:text-slate-300">contato@kamilamascena.com</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6 group">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary group-hover:brand-gradient-bg group-hover:text-white transition-all shadow-sm">
+                                <span class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-1">
+                                    Localização</p>
+                                <span class="text-lg font-bold text-slate-700 dark:text-slate-300">São Paulo,
+                                    Brasil</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 pt-8">
+                        <a class="w-16 h-16 rounded-2xl border-2 border-slate-100 dark:border-slate-800 flex items-center justify-center text-slate-400 font-black text-sm hover:brand-gradient-bg hover:text-white hover:border-transparent transition-all shadow-sm group"
+                            href="#" aria-label="Instagram">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 448 512"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                            </svg>
+                        </a>
+                        <a class="w-16 h-16 rounded-2xl border-2 border-slate-100 dark:border-slate-800 flex items-center justify-center text-slate-400 font-black text-sm hover:brand-gradient-bg hover:text-white hover:border-transparent transition-all shadow-sm group"
+                            href="#" aria-label="Behance">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 576 512"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M232 237.2c31.8-15.2 48.4-38.2 48.4-74 0-70.6-52.6-87.8-113.3-87.8H0v354.4h171.8c64.4 0 124.9-30.9 124.9-102.9 0-44.5-21.1-77.4-64.7-89.7zM68.3 135.3h87c33 0 53.3 11.7 53.3 43.1 0 32-20.9 45.4-53.7 45.4H68.3V135.3zm93.4 233.9H68.3v-91h93.1c38.7 0 62 13.9 62 46.5 0 35.7-25.1 44.5-61.7 44.5zM443.3 194.5c-61.4 0-104.9 44-104.9 110.1 0 71.3 46 109.9 108.6 109.9 57.3 0 94.6-29.3 103.1-76h-59.5c-9.2 16.9-25.6 24.3-43.1 24.3-33.1 0-48.4-23.7-50-60h152.9c.7-6.2 1.4-15 1.4-23.4.1-53.2-34.9-84.9-108.5-84.9zm-50 78.4c5.1-27.1 21.8-40.4 49.3-40.4 24.2 0 42.4 13.4 46.5 40.4h-95.8zM491.5 133.5h-93.1v32h93.1v-32z" />
+                            </svg>
+                        </a>
+                        <a class="w-16 h-16 rounded-2xl border-2 border-slate-100 dark:border-slate-800 flex items-center justify-center text-slate-400 font-black text-sm hover:brand-gradient-bg hover:text-white hover:border-transparent transition-all shadow-sm group"
+                            href="#" aria-label="LinkedIn">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 448 512"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label
+                                class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-4">Nome</label>
+                            <input
+                                class="w-full px-8 py-5 bg-white/50 dark:bg-slate-900/50 border-2 border-slate-100 dark:border-slate-800 rounded-3xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none font-bold text-sm transition-all"
+                                placeholder="Seu nome completo" type="text" />
+                        </div>
+                        <div class="space-y-2">
+                            <label
+                                class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-4">E-mail</label>
+                            <input
+                                class="w-full px-8 py-5 bg-white/50 dark:bg-slate-900/50 border-2 border-slate-100 dark:border-slate-800 rounded-3xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none font-bold text-sm transition-all"
+                                placeholder="email@exemplo.com" type="email" />
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-4">Serviço de
+                            interesse</label>
+                        <select
+                            class="w-full px-8 py-5 bg-white/50 dark:bg-slate-900/50 border-2 border-slate-100 dark:border-slate-800 rounded-3xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none font-bold text-sm text-slate-500 transition-all appearance-none">
+                            <option>Selecione uma opção...</option>
+                            <option>Fotografia Profissional</option>
+                            <option>Identidade Visual Completa</option>
+                            <option>Captação com Drone</option>
+                            <option>Projeto Personalizado</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label
+                            class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-4">Mensagem</label>
+                        <textarea
+                            class="w-full px-8 py-5 bg-white/50 dark:bg-slate-900/50 border-2 border-slate-100 dark:border-slate-800 rounded-3xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none font-bold text-sm transition-all"
+                            placeholder="Conte-me um pouco sobre sua ideia..." rows="5"></textarea>
+                    </div>
+                    <a class="w-full flex justify-center py-6 bg-gradient-to-r from-primary to-secondary text-white font-black rounded-3xl hover:shadow-2xl hover:shadow-primary/40 transition-all shadow-lg active:scale-[0.98] text-lg uppercase tracking-widest"
+                        href="orcamento.html">Ir para Formulário Completo</a>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer
+        class="pt-32 pb-16 px-6 bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none select-none flex items-center justify-center">
+            <span class="text-[25rem] font-black tracking-tighter transform -rotate-12 translate-y-24">KAMILA
+                MASCENA</span>
+        </div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div
+                class="flex flex-col md:flex-row justify-between items-start gap-16 pb-16 border-b border-slate-200 dark:border-slate-800">
+                <div class="space-y-8">
+                    <img alt="Kamila Mascena Logo" class="h-14 w-auto" src="assets/LOGO_PADRAO.png" />
+                    <p class="text-slate-500 text-lg font-medium max-w-sm leading-relaxed">Elevando a percepção de
+                        marcas através de excelência visual e design centrado em resultados.</p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-xl bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:brand-gradient-bg hover:text-white transition-all"
+                            href="#"><span class="material-symbols-outlined text-xl">share</span></a>
+                        <a class="w-10 h-10 rounded-xl bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:brand-gradient-bg hover:text-white transition-all"
+                            href="#"><span class="material-symbols-outlined text-xl">alternate_email</span></a>
+                        <a class="w-10 h-10 rounded-xl bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:brand-gradient-bg hover:text-white transition-all"
+                            href="#"><span class="material-symbols-outlined text-xl">videocam</span></a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-16">
+                    <div class="space-y-6">
+                        <p class="font-black text-xs uppercase tracking-[0.2em] text-slate-400">Navegação</p>
+                        <ul class="space-y-4 font-bold text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="#sobre">Sobre Mim</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="servicos.html">Serviços</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#portfolio">Portfólio</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#contato">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-6">
+                        <p class="font-black text-xs uppercase tracking-[0.2em] text-slate-400">Serviços</p>
+                        <ul class="space-y-4 font-bold text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="#">Branding</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Fotografia</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Visual ID</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Drones</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-6">
+                        <p class="font-black text-xs uppercase tracking-[0.2em] text-slate-400">Legal</p>
+                        <ul class="space-y-4 font-bold text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="#">Privacidade</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Termos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+                <p class="text-slate-500 text-sm font-bold">© 2024 Kamila Mascena. Design &amp; Identidade Visual.</p>
+                <div class="flex items-center gap-8">
+                    <span class="text-[10px] font-black uppercase tracking-[0.4em] text-primary">Branding</span>
+                    <span class="text-[10px] font-black uppercase tracking-[0.4em] text-secondary">Design</span>
+                    <span class="text-[10px] font-black uppercase tracking-[0.4em] text-primary">Photography</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remover classes ativas de todos os botões e restaurar estilo inativo
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-white', 'shadow-lg');
+                        btn.classList.add('hover:bg-white', 'dark:hover:bg-slate-700', 'text-slate-500', 'dark:text-slate-400');
+                    });
+
+                    // Adicionar classe ativa no botão clicado
+                    button.classList.remove('hover:bg-white', 'dark:hover:bg-slate-700', 'text-slate-500', 'dark:text-slate-400');
+                    button.classList.add('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-white', 'shadow-lg');
+
+                    const filterValue = button.getAttribute('data-filter');
+
+                    // Lógica de filtro dos itens do portfólio
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'todos' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                            item.animate([
+                                { opacity: 0, transform: 'scale(0.9)' },
+                                { opacity: 1, transform: 'scale(1)' }
+                            ], { duration: 400, fill: 'forwards', easing: 'ease-out' });
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
